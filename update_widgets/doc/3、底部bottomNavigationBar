@@ -1,0 +1,22 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(MaterialApp(
+      title: '一个Flutter应用',
+      home: Scaffold(
+          appBar: AppBar(
+            title: Text('首页'),
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            currentIndex: 1,
+            items: [
+              new BottomNavigationBarItem(
+                  icon: Icon(Icons.account_balance), title: Text('银行')),
+              new BottomNavigationBarItem(
+                  icon: Icon(Icons.contacts), title: Text('联系人')),
+              new BottomNavigationBarItem(
+                  icon: Icon(Icons.library_music), title: Text('音乐'))
+            ],
+          ))));
+}
