@@ -1,0 +1,51 @@
+import 'package:flutter/material.dart';
+//RaisedButton、FlatButton、OutlineButton，IconButton
+//https://yuzhiqiang.blog.csdn.net/article/details/85004313
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "flutter 入门程序",
+      theme: new ThemeData(primarySwatch: Colors.blue),
+      home: Scaffold(
+        appBar: new AppBar(
+          title: new Text("Demo"),
+        ),
+        body: new MyRaisedButton(),
+      ),
+    );
+  }
+}
+
+class MyRaisedButton extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return RaisedButton(
+      onPressed: _log,
+      child: new Text('浮动按钮'),
+      color: Colors.red,
+      textColor: Colors.white,
+      splashColor: Colors.blue,
+      highlightColor: Colors.yellow,
+//      设置阴影
+      elevation: 30,
+//      设置padding
+      padding: EdgeInsets.all(20),
+
+//      设置边框
+//        BeveledRectangleBorder 带斜角的长方形边框
+//        CircleBorder 圆形边框
+//    RoundedRectangleBorder 圆角矩形
+//    StadiumBorder 两端是半圆的边框
+      shape: BeveledRectangleBorder(
+          side: BorderSide(color: Colors.white),
+          borderRadius: BorderRadius.all(Radius.circular(10))),
+    );
+  }
+}
+
+_log() {
+  print("点击了按钮");
+}

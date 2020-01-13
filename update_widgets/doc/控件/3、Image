@@ -1,0 +1,49 @@
+import 'package:flutter/material.dart';
+
+//RaisedButton、FlatButton、OutlineButton，IconButton
+//https://yuzhiqiang.blog.csdn.net/article/details/85004313
+void main() => runApp(new MyApp());
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: "flutter 入门程序",
+      theme: new ThemeData(primarySwatch: Colors.blue),
+      home: Scaffold(
+        appBar: new AppBar(
+          title: new Text("Demo"),
+        ),
+        body: new MyIconImage(),
+      ),
+    );
+  }
+}
+
+class MyImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Image(
+      image: NetworkImage("https://img-blog.csdnimg.cn/20181210151747299.jpg"),
+      width: 200,
+      height: 200,
+      color: Colors.red,
+      colorBlendMode: BlendMode.colorDodge,
+      fit: BoxFit.scaleDown,
+//      repeat: ImageRepeat.repeatX,
+      alignment: Alignment.center,
+    );
+  }
+}
+
+class MyIconImage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return new Icon(
+      Icons.camera,
+      size: 50,
+      color: Colors.cyan,
+      textDirection: TextDirection.ltr,
+    );
+  }
+}
