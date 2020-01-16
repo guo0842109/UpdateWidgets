@@ -14,21 +14,15 @@ class MyApp extends StatelessWidget {
         ),
         body:Container(
 
-          child: IndexedStack(
-            index: 0,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+//            textDirection: TextDirection.rtl,
+            verticalDirection: VerticalDirection.down,
             children: <Widget>[
-              Image.network(
-                  "https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1547639589928&di=6d46424b47eec79a7f80bace2999217d&imgtype=0&src=http%3A%2F%2Fp0.ssl.qhimg.com%2Ft01c3f5bf72e7d1ac67.png"),
-              Text(
-                "Stack",
-                style: TextStyle(
-                  color: Colors.red,
-                  fontSize: 20,
-                  fontStyle: FontStyle.italic,
-                ),
-              ),
+              MyBox("1"),
+              MyBox("2"),
+              MyBox("3"),
             ],
-            alignment: Alignment.bottomCenter,
           ),
         ) ,
       ),
@@ -51,7 +45,7 @@ class MyBox extends StatelessWidget {
       height: boxSize,
 //      color: Colors.cyan,
       padding: EdgeInsets.all(10),
-      margin: EdgeInsets.all(0),
+      margin: EdgeInsets.all(1),
       alignment: Alignment.center,
       child: Text(index),
       decoration: BoxDecoration(

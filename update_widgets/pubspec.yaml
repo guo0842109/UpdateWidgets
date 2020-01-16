@@ -73,6 +73,6 @@ flutter:
 
   #/properties/flutter/properties/assets: type: wanted [array] got -images/lakes_header.jpg
 
-  assets:
-    - images/lakes_header.jpg
+#  assets:
+#    - images/lakes_header.jpg
 
