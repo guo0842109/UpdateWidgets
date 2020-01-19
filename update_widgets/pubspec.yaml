@@ -72,7 +72,6 @@ flutter:
   # see https://flutter.dev/custom-fonts/#from-packages
 
   #/properties/flutter/properties/assets: type: wanted [array] got -images/lakes_header.jpg
-
-#  assets:
-#    - images/lakes_header.jpg
+  assets:
+    - images/lakes_header.jpg
 
